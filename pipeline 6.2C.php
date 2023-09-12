@@ -57,9 +57,9 @@ pipeline {
                 success {
                     echo 'Deployed to staging successfully!'
                 }
-                mail to: aleenaf281@gmail.com,
-
-                subject:Security Scan ,
+                mail to: 'aleenaf281@gmail.com', 
+                subject: 'Security Scan', 
+                body: 'Security scan completed.'
             }
         }
 
