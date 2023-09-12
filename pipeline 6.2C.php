@@ -11,6 +11,10 @@ pipeline {
             post {
                 success {
                     echo 'Build completed successfully!'
+                    mail to: "aleenaf281@gmail.com",
+                    subject: "Build Status email"
+                    body: "Build was successful!"
+
                 }
                 failure {
                     echo 'Build failed!'
@@ -56,7 +60,11 @@ pipeline {
             post {
                 success {
                     echo 'Deployed to staging successfully!'
+                    mail to: "aleenaf281@gmail.com",
+                    subject: "Security Status email"
+                    body: "Security Scan was successful!"
                 }
+               
             }
         }
 
@@ -101,6 +109,9 @@ pipeline {
             post {
                 success {
                     echo 'Deployed to production successfully!'
+                    mail to: "aleenaf281@gmail.com",
+                    subject: "Deployement to Productio Status email"
+                    body: "Deployment was successful!"
                 }
                 failure {
                     echo 'Deployment to production failed!'
