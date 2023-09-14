@@ -10,10 +10,8 @@ pipeline {
             
             post {
                 success {
-                    echo 'Build completed successfully!',
-                    mail to: "aleenaf281@gmail.com",
-                    subject: "Build Status email",
-                    body: "Build was successful!"
+                    echo 'Build completed successfully!'
+                    
 
                 }
                 failure {
