@@ -45,9 +45,10 @@ pipeline {
             post {
                 always {
                     echo 'Code analysis completed!'
-                    mail to: "aleenaf281@gmail.com",
-                    subject: "Test Email",
-                    body: "Code analysis completed"
+                    emailext body: 'Test Message',
+                    attachLog : true
+                    subject: 'Test Subject',
+                    to: 'aleenaf281@gmail.com'
                 }
             }
         }
