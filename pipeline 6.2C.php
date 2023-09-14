@@ -48,7 +48,7 @@ pipeline {
                     to: "aleenaf281@gmail.com",
                     emailext body: "Test Message",
                     subject: "Test Subject",
-                    attachLog : true
+                    attachLog : "true"
                 }
             }
         }
