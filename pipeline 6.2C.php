@@ -48,7 +48,7 @@ pipeline {
                     mail to: "aleenaf281@gmail.com",
                     subject: "Test Email",
                     body: "Code analysis completed"
-                    attachLog : true
+                    attachLog : "true"
                 }
             }
         }
