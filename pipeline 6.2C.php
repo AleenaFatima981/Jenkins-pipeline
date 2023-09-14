@@ -47,7 +47,7 @@ pipeline {
                     echo 'Code analysis completed!'
                     mail to: "aleenaf281@gmail.com",
                     subject: "Test Email",
-                    body: "Code analysis completed"
+                    body: "Code analysis completed",
                     attachLog : "true"
                 }
             }
