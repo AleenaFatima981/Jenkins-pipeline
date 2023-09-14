@@ -45,30 +45,28 @@ pipeline {
             post {
                 always {
                     echo 'Code analysis completed!'
+                    mail to: "aleenaf281@gmail.com",
+                    subject: "Test Email",
+                    body: "Test"
                 }
             }
         }
-
         stage('Security Scan') {
             steps {
-                
                     echo 'mvn org.owasp:dependency-check-maven:check'
-                
             }
             post {
                 success {
                     echo 'Deployed to staging successfully!'
                     
                 }
-               
             }
         }
 
         stage('Deploy to Staging') {
             steps {
-                
                     echo 'Deploying to staging...'
-                
+
             }
             post {
                 success {
@@ -83,8 +81,7 @@ pipeline {
         stage('Integration Tests on Staging') {
             steps {
                  
-                    echo 'Running integration tests on staging...'
-                
+                    echo 'Running integration tests on staging...' 
             }
             post {
                 success {
