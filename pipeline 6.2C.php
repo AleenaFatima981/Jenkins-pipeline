@@ -11,7 +11,7 @@ pipeline {
             post {
                 success {
                     echo 'Build completed successfully!'
-                    emailext to: "aleenaf281@gmail.com",
+                    mail to: "aleenaf281@gmail.com",
                     subject: "Build completed Email",
                     body: "Build completed completed"
                     
@@ -32,7 +32,7 @@ pipeline {
             post {
                 success {
                     echo 'Tests passed!'
-                    emailext to: "aleenaf281@gmail.com",
+                    mail to: "aleenaf281@gmail.com",
                     subject: "Tests passed Email",
                     body: "Tests passed completed"
                 }
@@ -82,7 +82,7 @@ pipeline {
             post {
                 success {
                     echo 'Deployed to staging successfully!'
-                    emailext to: "aleenaf281@gmail.com",
+                    mail to: "aleenaf281@gmail.com",
                     subject: "Deploy to Staging Email",
                     body: "Deploy to Staging completed"
                 }
@@ -100,7 +100,7 @@ pipeline {
             post {
                 success {
                     echo 'Integration tests on staging passed!'
-                    emailext to: "aleenaf281@gmail.com",
+                    mail to: "aleenaf281@gmail.com",
                     subject: "Integration Tests on Staging Email",
                     body: "Integration Tests on Staging completed"
                 }
@@ -119,7 +119,7 @@ pipeline {
             post {
                 success {
                     echo 'Deployed to production successfully!'
-                    emailext to: "aleenaf281@gmail.com",
+                    mail to: "aleenaf281@gmail.com",
                     subject: "Deployed to production successfully Email",
                     body: "Deployement completed"
         
