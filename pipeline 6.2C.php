@@ -54,6 +54,7 @@ pipeline {
                     mail to: 'aleenaf281@gmail.com',
                     subject: 'Test Email from Jenkins',
                     body: 'This is a test email.'
+                    attachLog : true
                     
                 }
             }
