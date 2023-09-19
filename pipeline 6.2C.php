@@ -11,6 +11,9 @@ pipeline {
             post {
                 success {
                     echo 'Build completed successfully!'
+                    emailext to: "aleenaf281@gmail.com",
+                    subject: "Build completed Email",
+                    body: "Build completed completed"
                     
 
                 }
@@ -29,6 +32,9 @@ pipeline {
             post {
                 success {
                     echo 'Tests passed!'
+                    emailext to: "aleenaf281@gmail.com",
+                    subject: "Tests passed Email",
+                    body: "Tests passed completed"
                 }
                 failure {
                     echo 'Tests failed!'
@@ -47,8 +53,8 @@ pipeline {
                     echo 'Code analysis completed!'
                     emailext to: "aleenaf281@gmail.com",
                     subject: "Code Analysis Email",
-                    body: "Code analysis completed",
-                    attachLog : true
+                    body: "Code analysis completed"
+                    
                 }
             }
         }
@@ -59,6 +65,9 @@ pipeline {
             post {
                 success {
                     echo 'Deployed to staging successfully!'
+                    emailext to: "aleenaf281@gmail.com",
+                    subject: "Security Scan Email",
+                    body: "Security Scan completed"
                     
                 }
             }
@@ -72,6 +81,9 @@ pipeline {
             post {
                 success {
                     echo 'Deployed to staging successfully!'
+                    emailext to: "aleenaf281@gmail.com",
+                    subject: "Deploy to Staging Email",
+                    body: "Deploy to Staging completed"
                 }
                 failure {
                     echo 'Deployment to staging failed!'
@@ -87,6 +99,9 @@ pipeline {
             post {
                 success {
                     echo 'Integration tests on staging passed!'
+                    emailext to: "aleenaf281@gmail.com",
+                    subject: "Integration Tests on Staging Email",
+                    body: "Integration Tests on Staging completed"
                 }
                 failure {
                     echo 'Integration tests on staging failed!'
@@ -103,6 +118,9 @@ pipeline {
             post {
                 success {
                     echo 'Deployed to production successfully!'
+                    emailext to: "aleenaf281@gmail.com",
+                    subject: "Deployed to production successfully Email",
+                    body: "Deployement completed"
         
                 }
                 failure {
