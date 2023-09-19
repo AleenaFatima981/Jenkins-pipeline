@@ -52,9 +52,9 @@ pipeline {
                 always {
                     echo 'Code analysis completed!'
                     mail to: 'aleenaf281@gmail.com',
-                    subject: 'Test Email from Jenkins',
-                    body: 'This is a test email.'
-                    attachLog : true
+                    subject: 'Code Analysis completed',
+                    body: 'The code analysis is completed.'
+                    
                     
                 }
             }
@@ -66,7 +66,7 @@ pipeline {
             post {
                 success {
                     echo 'Deployed to staging successfully!'
-                    emailext to: "aleenaf281@gmail.com",
+                    mail to: "aleenaf281@gmail.com",
                     subject: "Security Scan Email",
                     body: "Security Scan completed"
                     
