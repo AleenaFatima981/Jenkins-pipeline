@@ -55,7 +55,7 @@ pipeline {
                     
                     emailext to: 'aleenaf281@gmail.com',
                     subject: 'Code Analysis completed',
-                    body: 'The code analysis is completed.'
+                    body: 'The code analysis is completed.',
                     attachLog : true
                     
                     
